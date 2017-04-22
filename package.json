@@ -1,1 +1,38 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-hyper-tabs-enhanced",     "homepage": "https://github.com/npmdoc/node-npmdoc-hyper-tabs-enhanced",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-hyper-tabs-enhanced.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  hyper-tabs-enhanced (v0.4.0)  [![npm package](https://img.shields.io/npm/v/npmdoc-hyper-tabs-enhanced.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-hyper-tabs-enhanced) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-hyper-tabs-enhanced.svg)](https://travis-ci.org/npmdoc/node-npmdoc-hyper-tabs-enhanced)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-hyper-tabs-enhanced",
+    "keywords": [
+        "documentation",
+        "hyper-tabs-enhanced"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_hyper_tabs_enhanced.js",
+    "name": "npmdoc-hyper-tabs-enhanced",
+    "nameAlias": "npmdoc_hyper_tabs_enhanced",
+    "nameOriginal": "npmdoc-hyper-tabs-enhanced",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-hyper-tabs-enhanced.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
